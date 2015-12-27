@@ -35,8 +35,7 @@ int main(void) {
     char name[20];
     printf("name>");
     scanf("%59s",name);    
-    p=search(head,name);
-    if(p!=NULL)
+    if((p=search(head,name))!=NULL)
         printf("name:%s eage:%d \n",p->name,p->eage);
     else
         printf("None\n");
