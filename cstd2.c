@@ -11,7 +11,7 @@ void swap(int *q,int *p){
     return;
 }
 int main(void) {
-    int x=0,y=1;
+    int x=5,y=1;
     swap(&x,&y);
     printf("x:%d y:%d \n",x,y);
 	return 0;
