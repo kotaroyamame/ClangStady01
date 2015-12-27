@@ -14,26 +14,31 @@ void show_human(struct human *head){
     }
     return;
 }
+struct human *search(struct human *head,char *name){
+    struct human *p;
+    for(p=head;p!=NULL;p=p->next){
+        if(strcmp(name,p->name)==0){
+            return p;
+        }
+    }
+    return NULL;
+}
 int main(void) {
     struct human humans[] = {
         {&humans[1],"ueda",18},
         {&humans[2],"iida",25},
         {NULL,"aizawa",20},
     };
-//    struct human ueda={NULL,"ueda",18};
-//    struct human iida={&ueda,"iida",25};
-//    struct human aizawa={&iida,"aizawa",20};
     struct human *head=humans;
     struct human *p;
     show_human(head);
     char name[20];
     printf("name>");
-    scanf("%s",name);
-          
-    for(p=head;p!=NULL;p=p->next){
-        if(strcmp(name,p->name)==0)
+    scanf("%59s",name);    
+    p=search(head,name);
+    if(p!=NULL)
         printf("name:%s eage:%d \n",p->name,p->eage);
-    }
-    return 0;
-    
+    else
+        printf("None\n");
+    return 0; 
 }
