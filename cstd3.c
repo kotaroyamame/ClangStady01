@@ -1,11 +1,7 @@
 #include <stdio.h>
 #include <string.h>
+#include "cstd3__struct.h"
 
-struct human{
-    struct human *next;
-    char name[20];
-    int eage;
-};
 void show_human(struct human *head){
     struct human *p;
     for(p = head;p != NULL;p = p->next){
