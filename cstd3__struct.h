@@ -5,4 +5,4 @@ struct human{
 };
 struct barth{
     int y,m,d;
-}
+};
