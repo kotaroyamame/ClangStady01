@@ -28,7 +28,7 @@ int main(void) {
     struct human *head=humans;
     struct human *p;
     show_human(head);
-    char name[20];
+    char name[60];
     printf("name>");
     scanf("%59s",name);    
     if((p=search(head,name))!=NULL)
