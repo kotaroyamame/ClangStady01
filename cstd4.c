@@ -44,7 +44,7 @@ void show_human(struct human *head){
 }
 struct human *search(struct human *head,char *name){
     struct human *p;
-    for(p=head;p!=NULL;p=p->next){
+    for(p=head;p!=NULL;p=p->next){//&(*p).next
         if(strcmp(name,p->name)==0){
             return p;
         }
@@ -60,7 +60,7 @@ int main(void) {
         {&humans[5],"yamada",35},
         {NULL,"aizawa",20},
     };
-    struct human *head=humans;
+    struct human *head=humans;//&humans[0]
     show_human(head);
     sort_human(head,6);
     show_human(head);
